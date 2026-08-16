@@ -30,7 +30,6 @@ Two stereo webcams, a fixed ChArUco reference board, a moving AprilTag marker mo
 **3 — Trunk Tracking**: MediaPipe Pose → 7 landmarks (shoulders, elbows, wrists, trunk centre) → `cv2.triangulatePoints()` → pitch/yaw/roll decomposition.
 
 ![Trunk center trajectory, top-down](images/trunk_center_trajectory_topdown.png)
-![Trunk angle deviation vs frame](images/trunk_angle_deviation_vs_frame.png)
 ![All 7 landmark XYZ trajectories](images/all_landmarks_xyz_trajectories.png)
 
 **4 — Raspberry Pi Portable System**: dual-camera 3D-printed rig, calibrated once, reused indefinitely.
