@@ -19,10 +19,6 @@ Two stereo webcams, a fixed ChArUco reference board, a moving AprilTag marker mo
 
 ![AprilTag stereo trajectory vs MoCap trajectory](images/apriltag_vs_mocap_trajectory.png)
 
-![Per-axis error boxplot vs MoCap ground truth](images/per_axis_error_boxplot.png)
-
-Z (depth) axis shows the largest variance — expected, since stereo depth error scales quadratically with distance and inversely with baseline.
-
 ## Method
 
 **1 — Calibration**: 13×9 checkerboard, `cv2.calibrateCamera()` (Zhang's method) → **0.47–0.77 px** reprojection error, extrinsics via `cv2.stereoCalibrate()`.
