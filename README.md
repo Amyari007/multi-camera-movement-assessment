@@ -24,7 +24,6 @@ Two stereo webcams, a fixed ChArUco reference board, a moving AprilTag marker mo
 **1 — Calibration**: 13×9 checkerboard, `cv2.calibrateCamera()` (Zhang's method) → **0.47–0.77 px** reprojection error, extrinsics via `cv2.stereoCalibrate()`.
 
 ![Checkerboard calibration image set](images/checkerboard_calibration_images.png)
-![Calibration validation report](images/calibration_validation_report.jpeg)
 
 **2 — 3D Reconstruction**: `cv2.solvePnP()` (ITERATIVE) tracks a 3-tag AprilTag mount (ID 12/14/20 fallback logic) against a static ChArUco reference frame. Camera/MoCap frames synced via Arduino signal, ±5 ms nearest-neighbour match.
 
